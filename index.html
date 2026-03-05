@@ -4,17 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkt</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fcsapi/chart-js/src/fcsapi-chart.css">
   </head>
   <body>
 
+   <div id="fcs_chartparent" style="height:100vh">
+        <div id="fcs_chart"></div>
+    </div>
 
-
-
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/gh/fcsapi/chart-js/src/fcsapi-chart.js"></script>
+    <script>
+        const chart = new FCSAPIChart({
+            container: document.getElementById('fcs_chart'),
+            parentid: 'fcs_chartparent',
+            accessKey: 'g6XwS9oni5bEPFWnttZUCW',
+            socketApiKey: 'Adv04rc5KNeeSV32J8QXnwokZ',
+            symbol: 'BINANCE:BTCUSDT',
+            period: '1H',
+            theme: 'dark', 
+            length: 150
+        });
+    </script>
 
     <script src="script.js"></script>
   </body>
