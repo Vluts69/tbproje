@@ -1,6 +1,37 @@
-//const url = new URL("https://api-v4.fcsapi.com/crypto/latest");
+const container = document.getElementById("fcschart");
+const sbtn = document.querySelector("#sellBtn");
+const bbtn = document.querySelector("#buyBtn");
 
-const params = {
-  symbol: "BINANCE:BTCUSDT,COINBASE:ETHUSD",
-  access_key: "test"
+
+
+const options = {
+  container: container,     
+  parentid: "chart",          
+  accessKey: "g6XwS9oni5bEPFWnttZUCW", 
+  symbol: "BTCUSD",           
+  period: "5",                
+  theme: "dark",             
+  length: "200"               
 };
+
+
+const chart = new FCSAPIChart(options);
+
+
+
+
+bbtn.addEventListener("click", () => {
+
+
+});
+
+
+// SELL
+sbtn.addEventListener("click", () => {
+
+
+
+});
+
+
+

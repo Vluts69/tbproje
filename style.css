@@ -3,3 +3,34 @@ body {
 	margin: 0px;
 	background: #24242e;
 }
+
+#chart{
+width:900px;
+height:900px;
+margin: 0px;
+}
+
+.buttons{
+margin-top:20px;
+margin-left: 1000px;
+}
+
+button{
+padding: 15px;
+margin:20px;
+font-size:16px;
+cursor:pointer;
+border:none;
+width: 120px;
+}
+
+#buyBtn{
+background:green;
+color:white;
+}
+
+#sellBtn{
+background:red;
+color:white;
+margin-left: 20px;
+}

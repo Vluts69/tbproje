@@ -1,0 +1,18 @@
+
+const url = "https://cdn.jsdelivr.net/gh/fcsapi/chart-js/src/fcsapi-chart.js";
+
+const getinfo =async()=>{
+
+  let response = await fetch(url);
+  console.log(response);
+
+  let data1= await response.json();
+  console.log(data1);
+
+
+
+
+
+
+}
+getinfo();
