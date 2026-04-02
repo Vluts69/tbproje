@@ -2,17 +2,17 @@ body {
 	background: linear-gradient(90deg,rgba(36, 36, 46, 1) 0%, rgba(0, 21, 79, 1) 35%, rgba(0, 20, 74, 1) 100%);
 	margin: 0px;
 	background: #24242e;
+	padding: 0;
+	
 }
 
-#chart{
-width:900px;
-height:900px;
-margin: 0px;
-}
+
+
+
 
 .buttons{
-margin-top:20px;
-margin-left: 1000px;
+margin-left: 1500px;
+margin-top: 100px;
 }
 
 button{
@@ -33,4 +33,57 @@ color:white;
 background:red;
 color:white;
 margin-left: 20px;
+}
+
+.chart {
+    width: 70%;
+	height: 90%;
+	margin: 10px;
+}
+
+.menu{
+	width: 400px;
+	height: 500px;
+	outline: 2px solid black;
+	margin-left: 1450px;
+	margin-top: 100px;
+
+	
+}
+
+#money{
+	
+}
+
+#price{
+ width: 300px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 20px;
+  margin: 20px;
+margin-left: 1450px;
+margin-top: -850px;
+color: white;
+font-size: 20px;
+font-style: italic;
+}
+
+#tradel{
+width: 500px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 20px;
+  margin: 20px;
+  background-color: red;
+  margin-left: -1400px;
+  margin-top: 950px;
+}
+
+
+.trades{
+
+width: 820px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgb(1, 0, 80);
+  margin: 20px;
+  background-color: #181829;
 }
