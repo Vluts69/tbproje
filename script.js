@@ -40,17 +40,38 @@ getinfo();
 
 bbtn.addEventListener("click", () => {
 
+function addElement() {
+  const newDiv = document.createElement("div");
+
+const newContent = document.createTextNode("Long that BITTY FOMO");
+  newDiv.appendChild(newContent);
+  
+  const klass = document.querySelector("#tradel");
+  klass.appendChild(newDiv);
+}
+addElement();
+
+
 let long1 = long.textcontent + (" LONG: ");
 long.textcontent = long1;
-
 console.log(long1);
+
 });
 
 
 // SELL
 sbtn.addEventListener("click", () => {
 
+function lisaElement() {
+  const teineDiv = document.createElement("div");
 
+const sellContent = document.createTextNode("Short that SHII");
+  teineDiv.appendChild(sellContent);
+  
+  const kklass = document.querySelector("#trades");
+  kklass.appendChild(teineDiv);
+ }
+ lisaElement();
 
 });
 

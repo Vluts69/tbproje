@@ -3,7 +3,6 @@ body {
 	margin: 0px;
 	background: #24242e;
 	padding: 0;
-	
 }
 
 
@@ -11,8 +10,8 @@ body {
 
 
 .buttons{
-margin-left: 1500px;
-margin-top: 100px;
+margin: 20px;
+
 }
 
 button{
@@ -21,7 +20,8 @@ margin:20px;
 font-size:16px;
 cursor:pointer;
 border:none;
-width: 120px;
+width: 130px;
+
 }
 
 #buyBtn{
@@ -36,54 +36,69 @@ margin-left: 20px;
 }
 
 .chart {
-    width: 70%;
-	height: 90%;
-	margin: 10px;
+    width: 1200px;
+	height: 800px;
+	margin: 5px;
 }
+
 
 .menu{
 	width: 400px;
 	height: 500px;
 	outline: 2px solid black;
 	margin-left: 1450px;
-	margin-top: 100px;
-
-	
+	margin-top: -740px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 }
 
-#money{
-	
-}
 
 #price{
- width: 300px;
+ width: 360px;
   border: 2px solid rgb(0, 0, 0);
   padding: 20px;
-  margin: 20px;
-margin-left: 1450px;
-margin-top: -850px;
 color: white;
 font-size: 20px;
 font-style: italic;
+display: flex;
+flex-direction: column;
 }
 
 #tradel{
-width: 500px;
+width: 900px;
   border: 2px solid rgb(0, 0, 0);
   padding: 20px;
   margin: 20px;
-  background-color: red;
-  margin-left: -1400px;
-  margin-top: 950px;
+  background-color: rgb(23, 46, 26);
+  margin-top: 50px;
+}
+
+#trades{
+  width: 900px;
+  border: 2px solid rgb(65, 30, 30);
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(59, 0, 87);
+  margin-top: 50px;
 }
 
 
 .trades{
 
-width: 820px;
-  height: 40px;
+width: 1280px;
+  height: 300px;
   padding: 10px;
   border: 1px solid rgb(1, 0, 80);
   margin: 20px;
-  background-color: #181829;
+  background-color: #1b1b61;
+  margin-top: 300px;
+}
+
+#money{
+display: block;
+font-family: sans-serif;
+
+
+
 }
