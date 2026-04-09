@@ -98,6 +98,11 @@ width: 1280px;
 #money{
 display: block;
 font-family: sans-serif;
+width: 390px;
+height: 50px;
+margin: 20px;
+border: solid black 1px;
+
 
 
 
