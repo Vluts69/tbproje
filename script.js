@@ -4,6 +4,10 @@ const bbtn = document.querySelector("#buyBtn");
 const price = document.querySelector("#price");
 const long = document.querySelector("#tradel");
 const select = document.getElementById("number");
+const database = "https://tinkr.tech/sdb/Vidrik%20Luts/database";
+
+
+
 new TradingView.widget({
     "autosize": true,
     "symbol": "BINANCE:BTCUSDT",
@@ -19,28 +23,6 @@ new TradingView.widget({
     "hide_legend": false,
     "hide_volume": false
 });
-
-
-const getinfo =async()=>{
-
-  let response = await fetch(url);
-  console.log(response);
-
-  let data1= await response.json();
-  console.log(data1);
-
-  //COIN PRICE: 
-    let rtp= data1[0].current_price;
-
-
-    let price1 = price.textContent + ("Hind: " + rtp + "$");
-    price.textContent = price1;
-    console.log(price1);
-    
- }
-getinfo();
-
-
 
 
 bbtn.addEventListener("click", () => {
@@ -62,43 +44,63 @@ newDiv.appendChild(amount1);
   let response = await fetch(url);
 
   let data1= await response.json();
-  console.log(data1);
+
     let rtp= data1[0].current_price;
+    //LIVE HIND
     let price1 = document.createTextNode("Hind LIVE: " + rtp + "$ ");
   newDiv.appendChild(price1);
-    console.log(price1);
-//GG
-
-
-
- // Object.freeze(price1);
-  let freezed =  Object.freeze(price1);
-  let pricefreeze = document.createTextNode("Position start: " + freezed);
-  console.log(freezed);
-  newDiv.appendChild(pricefreeze);
-
 
  let size = rtp * amount;
  let size1= document.createTextNode(" Pos Size: " + size + "$ ");
 newDiv.appendChild(size1);
 
+
+
+   // let price1 = price.textContent + ("Hind: " + rtp + "$");
+   // price.textContent = price1;
+    //console.log(price1);
+
+  //let position = document.createTextNode("Position start: " + freezed);
+  //newDiv.appendChild(pricefreeze);
+
+
+
+
+
+
+
+//all info trade save
+const response6 = await fetch(database, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({amount, rtp, size })
+});
+const data = await response6.json();
+console.log(data); 
+newDiv.appendChild(response6);
+
+
+
+// GET info from database to show trade
+
+	const response5 = await fetch(database);
+	const trades = await response5.json();
+
+	console.log(documents); 
+
  }
 getinfo();
-
- 
-
-  
   const klass = document.querySelector("#tradel");
   klass.appendChild(newDiv);
 }
+
+
 addElement();
+} );
 
 
 
 
-
-
-});
 
 
 // SELL
