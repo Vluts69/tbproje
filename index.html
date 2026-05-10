@@ -14,23 +14,45 @@
 
    
     
-      
+  
     <div class="menu">
       <div id="price"></div>
-
       <label for="number" style="color: white;">SELECT AMOUNT: </label>
       <input id="number" type="number" placeholder="0.01" step="0.0001" min="0" max="10" value="" />
 
-      <div id="money">
 
-      </div>
+
+      <div id="money">
+<div>
+<input class="margin" id="percentrange" type=range min=0 max=200 value=0 step=1 list=tickmarks>
+<datalist id=tickmarks>
+    <option>0.5%</option>
+    <option>1%</option>
+    <option>2%</option>
+    <option>3%</option>
+    <option>4%</option>
+    <option>5%</option>
+    <option>10%</option>
+    <option>30%</option>
+    <option>60%</option>
+    <option>80%</option>
+    <option>100%</option>
+ </datalist>
+ <p id="percent">0.5%</p>
+</div>
+</div>
+
+
+
+
+
 
     <div class="buttons">
 <button id="buyBtn">BUY</button>
 <button id="sellBtn">SELL</button>
    
   </div>
-</div>
+
 
  <div class="trades">
       <div id="tradel"></div>

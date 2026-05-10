@@ -5,9 +5,24 @@ body {
 	padding: 0;
 }
 
+#margin { width: 350px; }
 
+:root  { --slider-width: 100% }
 
+input, datalist  {
+    width: var(--slider-width);
+}
 
+datalist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+option {
+    text-align: center;
+    width: 1.78rem; /* ~width of label '200' */
+}
 
 .buttons{
 margin: 20px;
@@ -72,6 +87,10 @@ width: 900px;
   margin: 20px;
   background-color: rgb(23, 46, 26);
   margin-top: 50px;
+
+  flex-direction: column;
+  gap: 10px;
+
 }
 
 #trades{
@@ -81,6 +100,8 @@ width: 900px;
   margin: 20px;
   background-color: rgb(59, 0, 87);
   margin-top: 50px;
+
+
 }
 
 
@@ -93,6 +114,8 @@ width: 1280px;
   margin: 20px;
   background-color: #1b1b61;
   margin-top: 300px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #money{
