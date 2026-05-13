@@ -28,11 +28,6 @@ new TradingView.widget({
 });
 
 //MENU
-const percentages = ["0.5%", "1%", "2%", "3%", "4%", "5%", "10%", "30%", "60%", "80%", "100%"];
-
-percent.addEventListener("input", function() {
-    percentrange.textContent = percentages[this.value];
-  });
 
 
 
@@ -40,7 +35,7 @@ percent.addEventListener("input", function() {
 
 
 
-async function gettrade() {
+setInterval(async function() {
   const response = await fetch(database);
   const data = await response.json();
 
@@ -48,6 +43,8 @@ async function gettrade() {
 let data1= await response3.json();
 let rtp= data1[0].current_price;
 
+  document.getElementById('tradel').innerHTML = '';
+  document.getElementById('trades').innerHTML = '';
 
 let tradelong = data;
 for (let player of tradelong) {
@@ -93,8 +90,7 @@ if (player.id1 === 1) {
       document.getElementById("trades").appendChild(pnl3);
 }
 }
-}
-gettrade();
+}, 10);
 
 bbtn.addEventListener("click", () => {
 
